@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="stud" class="com.csi.secondary.Student">
+		<property name="id" value="01"></property>
+		<property name="name" value="Rupa"></property>
+	</bean>
+	
+	<bean id="college" class="com.csi.secondary.College">
+		<property name="address" value="Pune"></property>
+		<property name="student" ref="stud"></property>
+	</bean>
+	
+
+</beans>
