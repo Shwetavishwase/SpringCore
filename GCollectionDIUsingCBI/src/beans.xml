@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="stud" class="com.csi.secondary.Student">
+		<constructor-arg name="list">
+			<list>
+				<value>101</value>
+				<value>102</value>
+				<value>103</value>
+				<value>104</value>
+				<value>105</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg name="set">
+			<set>
+				<value>Shweta</value>
+				<value>Rupesh</value>
+				<value>Balram</value>
+				<value>Priya</value>
+				<value>Vikrant</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg name="map">
+			<map>
+				<entry key="201" value="Geeta"></entry>
+				<entry key="202" value="Ganesh"></entry>
+				<entry key="203" value="Sujal"></entry>
+				<entry key="204" value="Dhanu"></entry>
+				<entry key="205" value="Vicky"></entry>
+			</map>
+		
+		</constructor-arg>
+	</bean>
+	
+	<bean id="college" class="com.csi.secondary.College">
+		<constructor-arg name="address" value="Pune"></constructor-arg>
+		<constructor-arg name="student" ref="stud"></constructor-arg>
+	</bean>
+	
+
+</beans>
